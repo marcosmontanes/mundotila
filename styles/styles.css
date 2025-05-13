@@ -1,0 +1,59 @@
+body {
+background-color:#f8f3ea;
+opacity: 1;}
+.logo {
+    text-align: center;
+    height:140 px;
+    width: 140 px;
+}
+.titulodepagina {
+    text-align: center;
+    font-size: 2em;
+    color: rgb(190,98,113);
+    font-family: "Sacramento", cursive;
+    font-weight: 900;
+    font-style: normal;}
+
+article {
+text-align: right;
+}
+.contenedor {
+    display: flex; /* Utilizamos Flexbox para el dise�o de columnas */
+    width: 70%; /* Ancho del contenedor principal (ajusta seg�n necesites) */
+    margin: 20px auto; /* Centra el contenedor en la p�gina */
+    border: 1px solid #ccc; /* Borde de ejemplo para visualizar el contenedor */
+}
+
+.columna-texto {
+    flex: 1; /* La columna de texto ocupa el espacio restante */
+    padding: 20px;
+    background-color: rgb(190, 98, 113);
+    font-size: larger;
+    }
+
+.columna-titulo {
+    font-size:1.5em;
+    color: whitesmoke;
+}
+.columna-imagen {
+    width: 400px; /* Ancho fijo para la columna de la imagen (ajusta seg�n necesites) */
+}
+
+.columna-imagen img {
+    display: block; /* Evita espacios extra debajo de la imagen */
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: 100%; /* La imagen ocupa toda la altura de su contenedor */
+    object-fit: cover; /* La imagen se ajusta al contenedor manteniendo su proporci�n y recortando si es necesario */
+}
+.Titulo-otono {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 2em;
+    border: 1px solid black;
+    margin: 25px 50px 75px 100px;
+    background-color: rgb(169, 207, 195);
+}
+.galeriafotos {
+    display: flex;
+    justify-content: space-around;
+}
