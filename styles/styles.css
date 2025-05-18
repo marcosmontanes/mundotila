@@ -1,6 +1,28 @@
 body {
-background-color:#f8f3ea;
-opacity: 1;}
+background-color: #fff;
+opacity: 1;
+display: flex;
+    flex-direction: column;
+    min-height: 100vh ;
+font-family: "Helvetica Neue";
+    src: url('../fonts/mi-fuente/HelveticaNeueLight.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    
+font-family: "Helvetica Neue bold negrita";
+    src: url('../fonts/mi-fuente/HelveticaNeueBold.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+}
+
+/*HEADER*/
+
 .logo {
     text-align: center;
     height:140 px;
@@ -17,6 +39,48 @@ opacity: 1;}
 article {
 text-align: right;
 }
+
+/*HEADER - LISTA DE LINKS*/
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* O space-around / space-evenly */
+    align-items: center; /* Para alinear verticalmente los li si tuvieran alturas diferentes */
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0; /* Quita el padding por defecto del ul */
+    margin: 0; /* Quita el margen por defecto del ul */
+    width: 100%;
+}
+
+.links li {
+  /* No se necesita display: inline-block o float */
+}
+
+.links a {
+    display: block; /* Para que el padding funcione correctamente si lo añades al 'a' */
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    
+}
+
+.links a:hover {
+    font-size: 1.3em;
+    text-decoration: underline
+}
+
+.links a:active {
+    font-size: 1.3em;
+    color: white;
+    background-color: blue;
+}
+
+.links a:visited {
+    font-size: 1.3em;
+}
+
 .contenedor {
     display: flex; /* Utilizamos Flexbox para el dise�o de columnas */
     width: 70%; /* Ancho del contenedor principal (ajusta seg�n necesites) */
@@ -45,6 +109,9 @@ text-align: right;
     height: 100%; /* La imagen ocupa toda la altura de su contenedor */
     object-fit: cover; /* La imagen se ajusta al contenedor manteniendo su proporci�n y recortando si es necesario */
 }
+
+/*TITULO OTOÑO*/
+
 .Titulo-otono {
     text-align: center;
     color: antiquewhite;
@@ -53,7 +120,104 @@ text-align: right;
     margin: 25px 50px 75px 100px;
     background-color: rgb(169, 207, 195);
 }
+
+/*PAGINA MAIN*/
+
+.pagina-main {
+    height: 100vh; /* 60% de la altura del viewport para desktop */
+    display: grid;
+    /* Las columnas son 30% y 60% del ancho del contenedor .page-main.
+       Como .page-main tiene width: 100%, estas son efectivamente 30% y 60% del ancho de la página.
+       El 10% restante del ancho de .page-main quedará como espacio vacío a la derecha. */
+    grid-template-columns: 20% 70%;
+    width: 100%; /* .page-main ocupa todo el ancho disponible */
+    overflow: hidden; /* Clave para que el contenido no desborde el 60vh de .page-main */
+}
+
+.filtros-en-columna {
+    background-color: white;
+    padding: 1.5em;
+    overflow-y: auto; /* Scroll vertical si los filtros son muchos */
+    height: 100%; /* Ocupa toda la altura de .page-main (que es 60vh) */
+    border-right: 1px solid white;
+}
+
+.productos-en-columna {
+    background-color: white;
+    padding: 1.5em;
+    overflow-y: auto; /* Scroll vertical si los productos son muchos */
+    height: 100%; /* Ocupa toda la altura de .page-main (que es 60vh) */
+}
+
 .galeriafotos {
     display: flex;
     justify-content: space-around;
+}
+
+
+/* ----- RESPONSIVE PARA CELULAR ----- */
+@media (max-width: 768px) {
+    /* Permitir que header, main y footer crezcan con su contenido */
+    .page-header,
+    .page-main,
+    .page-footer {
+        height: auto;
+    }
+
+    .page-main {
+        display: flex; /* Cambiamos de grid a flex para apilar las columnas */
+        flex-direction: column;
+        /* La altura de 60vh ya no aplica, se ajustará al contenido */
+    }
+
+    .filters-column,
+    .products-column {
+        width: 100%; /* Cada columna ocupa todo el ancho */
+        height: auto; /* Altura se ajusta al contenido */
+        border-right: none; /* Quitar borde en layout de columna */
+        padding: 1em; /* Ajustar padding si es necesario */
+    }
+
+    .filters-column {
+        margin-bottom: 1.5em; /* Espacio entre filtros y productos al apilarse */
+        border-bottom: 1px solid #e0e0e0; /* Separador visual */
+    }
+
+    .product-gallery {
+        /* Ajustar el tamaño mínimo de los items para móviles */
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1em;
+    }
+    .product-item img {
+        max-width: 120px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8em;
+    }
+    .page-header p, .page-footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (opcional) */
+@media (max-width: 480px) {
+    .product-gallery {
+        /* Podría ser una sola columna o dos más pequeñas */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* O 1fr para una sola columna */
+    }
+    .product-item img {
+        max-width: 100px;
+    }
+
+    .page-header, .page-footer, .filters-column, .products-column {
+        padding: 0.8em;
+    }
+
+    .filters-column h2, .products-column h2 {
+        font-size: 1.2em;
+    }
+     .filter-group h3 {
+        font-size: 1em;
+    }
 }

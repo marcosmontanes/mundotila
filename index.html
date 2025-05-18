@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo Tila - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
+    <header class="page-header">
         <h1> </h1>
         <section class="logo">
         <a href="./index.html">
@@ -15,43 +16,92 @@
         </a>
         </section>
         <section class="titulodepagina">
-        <h1>Home</h1>
+        <h1>HOME</h1>
         </section>
-        <section class="links">
+        <section class="lista-de-links">
         <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./pages/coleccion_otono_invierno.html">Coleccióm Otoño-Invierno</a></li>
-                <li><a href="./pages/bebes.html">Bebés</a></li>
-                <li><a href="./pages/ninas.html">Niñas</a></li>
-                <li><a href="./pages/ninos.html">Niños</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="./pages/Pagina_agradecimiento_contacto.html">Pagina de agradecimiento</a></li>
-                <li><a href="./pages/carrito.html">Carrito</a></li>
+            <ul class="links-de-escritorio">
+                <li class="nav-item"><a class="nav-item" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-item" href="./pages/coleccion_otono_invierno.html">Coleccióm Otoño-Invierno</a></li>
+                <li class="nav-item"><a class="nav-item" href="./pages/bebes.html">Bebés</a></li>
+                <li class="nav-item"><a class="nav-item" href="./pages/ninas.html">Niñas</a></li>
+                <li class="nav-item"><a class="nav-item" href="./pages/ninos.html">Niños</a></li>
+                <li class="nav-item"><a class="nav-item" href="./pages/contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-item" href="./pages/Pagina_agradecimiento_contacto.html">Pagina de agradecimiento</a></li>
+                <li class="nav-item"><a class="nav-item" href="./pages/carrito.html">Carrito</a></li>
             </ul>
         </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+            <button class="navbar-toggler mobile-menu-button" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse mobile-nav" id="mobileNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/coleccion_otono_invierno.html">Coleccióm Otoño-Invierno</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/bebes.html">Bebés</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/ninas.html">Niñas</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/ninos.html">Niños</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/Pagina_agradecimiento_contacto.html">Pagina de agradecimiento</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/carrito.html">Carrito</a></li>
+            </ul>
+        </div>        
+        </nav>
         </section>
-    </header>    
-    <main>
         <div class="contenedor">
             <div class="columna-texto">
-            <pre>
-                <div class="columna-titulo">
-                <h1>Solo por hoy 30% off</h1> 
-                </div>
-            3 cuotas sin interes con tarjeta de credito
-            6 cuotas sin interes a partir de $180.000
-            Envíos gratis a partir de $100.000
-            </pre>
+                <pre>
+                    <div class="columna-titulo">
+                        <h1>Solo por hoy 30% off</h1> 
+                    </div>
+                    3 cuotas sin interes con tarjeta de credito
+                    6 cuotas sin interes a partir de $180.000
+                    Envíos gratis a partir de $100.000
+                </pre>
             </div>
             <div class="columna-imagen">
-            <img src="./imagenes/Home/coleccion tila home carrousel 1.jpg" width="800 px" height="600 px" alt="foto carrousel">    
+                <img src="./imagenes/Home/coleccion tila home carrousel 1.jpg" width="800 px" height="600 px" alt="foto carrousel">    
             </div>
         </div>
+    </header>    
         <hr>
-        <div class="Titulo-otono">
+    <div class="Titulo-otono">
         <h2>Colección Otoño - Invierno</h2>
-        </div>
+    </div>
+    <main class="pagina-main">
+        <aside class="filtros-en-columna">
+            <section class="filter-group">
+                <h3>Colores</h3>
+                <ul>
+                    <li><label><input type="checkbox" name="color" value="rojo"> Rojo</label></li>
+                    <li><label><input type="checkbox" name="color" value="azul"> Azul</label></li>
+                    <li><label><input type="checkbox" name="color" value="verde"> Verde</label></li>
+                    <li><label><input type="checkbox" name="color" value="negro"> Negro</label></li>
+                    <li><label><input type="checkbox" name="color" value="blanco"> Blanco</label></li>
+                    <li><label><input type="checkbox" name="color" value="gris"> Gris</label></li>
+                </ul>
+            </section>
+            <section class="filter-group">
+                <h3>Talles</h3>
+                <ul>
+                    <li><label><input type="checkbox" name="talle" value="xs"> XS</label></li>
+                    <li><label><input type="checkbox" name="talle" value="s"> S</label></li>
+                    <li><label><input type="checkbox" name="talle" value="m"> M</label></li>
+                    <li><label><input type="checkbox" name="talle" value="l"> L</label></li>
+                    <li><label><input type="checkbox" name="talle" value="xl"> XL</label></li>
+                    <li><label><input type="checkbox" name="talle" value="xxl"> XXL</label></li>
+                </ul>
+            </section>
+            <section class="filter-group">
+                <h3>Precio</h3>
+                <label for="price-range">Rango de precios:</label>
+                <input type="range" id="price-range" name="price-range" min="0" max="1000" step="10">
+                <output for="price-range" name="price-output"></output>
+            </section>
+        </aside>
+        <section class="productos-en-columna">
         <section class="galeriafotos">
             <img src="imagenes/Home/home - campera sara.jpg" width="200 px" height="200 px" alt="campera sara">
             <img src="imagenes/Home/home - camperita corderoy.jpg" width="200 px" height="200 px" alt="camperita corderoy">
@@ -99,7 +149,8 @@ Campera Sara
 Campera Sara
 4 a 12 para niñas  $62.930
             </pre>
-    </main>
+        </section>
+        </main>
     <hr>
     <footer>
         <h4>Mundo Tila</h4>
@@ -114,5 +165,6 @@ Campera Sara
         <img src="./imagenes/Iconos/tik-tok.png" height="30 px" width="30 px" alt="redes-sociales">
     </section>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
