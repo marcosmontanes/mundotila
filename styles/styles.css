@@ -1,152 +1,174 @@
+@font-face {
+    font-family: "Helvetica-Neue-light", sans-serif;
+    src: url('../fonts/mi-fuente/HelveticaNeueLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    color: #333333;
+}
+
 body {
-background-color: #fff;
-opacity: 1;
-display: flex;
+    background-color: #fff;
+    opacity: 1;
+    display: flex;
     flex-direction: column;
-    min-height: 100vh ;
-font-family: "Helvetica Neue";
-    src: url('../fonts/mi-fuente/HelveticaNeueLight.otf');
-    font-weight: normal;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
-    
-font-family: "Helvetica Neue bold negrita";
-    src: url('../fonts/mi-fuente/HelveticaNeueBold.otf');
-    font-weight: normal;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
+    min-height: 100vh;
 }
 
 /*HEADER*/
 
 .logo {
     text-align: center;
-    height:140 px;
+    height: 140 px;
     width: 140 px;
 }
+
 .titulodepagina {
     text-align: center;
     font-size: 2em;
-    color: rgb(190,98,113);
-    font-family: "Sacramento", cursive;
+    color: rgb(190, 98, 113);
+    font-family: "Helvetica Neue";
     font-weight: 900;
-    font-style: normal;}
-
-article {
-text-align: right;
+    font-style: normal;
 }
 
-/*HEADER - LISTA DE LINKS*/
+article {
+    text-align: right;
+}
 
-.links {
+/*LISTA DE LINKS*/
+
+.links-de-escritorio {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; /* O space-around / space-evenly */
-    align-items: center; /* Para alinear verticalmente los li si tuvieran alturas diferentes */
-    list-style-type: none; /* Quita los puntos de la lista */
-    padding: 0; /* Quita el padding por defecto del ul */
-    margin: 0; /* Quita el margen por defecto del ul */
+    justify-content: space-around;
+    /* O space-around / space-evenly */
+    align-items: center;
+    /* Para alinear verticalmente los li si tuvieran alturas diferentes */
+    list-style-type: none;
+    /* Quita los puntos de la lista */
+    padding: 0;
+    /* Quita el padding por defecto del ul */
+    margin: 0;
+    /* Quita el margen por defecto del ul */
     width: 100%;
 }
 
-.links li {
-  /* No se necesita display: inline-block o float */
-}
-
-.links a {
-    display: block; /* Para que el padding funcione correctamente si lo añades al 'a' */
+.links-de-escritorio a {
+    display: block;
+    /* Para que el padding funcione correctamente si lo añades al 'a' */
     padding: 10px;
     text-decoration: none;
     color: black;
+    font-style: "Helvetica-Neue-light", sans-serif;
     font-size: 1em;
-    
+    transition: font-size 0.3s ease-in-out;
 }
 
-.links a:hover {
+.links-de-escritorio a:hover {
     font-size: 1.3em;
     text-decoration: underline
 }
 
-.links a:active {
+.links-de-escritorio a:active {
     font-size: 1.3em;
     color: white;
     background-color: blue;
 }
 
-.links a:visited {
+.links-de-escritorio a:visited {
     font-size: 1.3em;
 }
 
 .contenedor {
-    display: flex; /* Utilizamos Flexbox para el dise�o de columnas */
-    width: 70%; /* Ancho del contenedor principal (ajusta seg�n necesites) */
-    margin: 20px auto; /* Centra el contenedor en la p�gina */
-    border: 1px solid #ccc; /* Borde de ejemplo para visualizar el contenedor */
+    display: flex;
+    /* Utilizamos Flexbox para el dise�o de columnas */
+    width: 80%;
+    /* Ancho del contenedor principal (ajusta seg�n necesites) */
+    margin: 20px auto;
+    /* Centra el contenedor en la p�gina */
+    border: 1px solid #ccc;
+    /* Borde de ejemplo para visualizar el contenedor */
 }
 
 .columna-texto {
-    flex: 1; /* La columna de texto ocupa el espacio restante */
+    flex: 1;
+    /* La columna de texto ocupa el espacio restante */
     padding: 20px;
     background-color: rgb(190, 98, 113);
     font-size: larger;
-    }
+    text-align: center;
+    line-height: 1.2;
+}
 
 .columna-titulo {
-    font-size:1.5em;
+    font-size: 1.5em;
     color: whitesmoke;
 }
+
 .columna-imagen {
-    width: 400px; /* Ancho fijo para la columna de la imagen (ajusta seg�n necesites) */
+    width: 400px;
+    /* Ancho fijo para la columna de la imagen (ajusta seg�n necesites) */
 }
 
 .columna-imagen img {
-    display: block; /* Evita espacios extra debajo de la imagen */
-    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
-    height: 100%; /* La imagen ocupa toda la altura de su contenedor */
-    object-fit: cover; /* La imagen se ajusta al contenedor manteniendo su proporci�n y recortando si es necesario */
+    display: block;
+    /* Evita espacios extra debajo de la imagen */
+    width: 100%;
+    /* La imagen ocupa todo el ancho de su contenedor */
+    height: 100%;
+    /* La imagen ocupa toda la altura de su contenedor */
+    object-fit: cover;
+    /* La imagen se ajusta al contenedor manteniendo su proporci�n y recortando si es necesario */
 }
 
 /*TITULO OTOÑO*/
 
 .Titulo-otono {
+    display: grid;
+    /* La columna de texto ocupa el espacio restante */
+    place-items: center;
     text-align: center;
     color: antiquewhite;
     font-size: 2em;
-    border: 1px solid black;
-    margin: 25px 50px 75px 100px;
+    border: 1px solid brgb(169, 207, 195);
+    margin: auto auto auto auto;
+    padding: 5px 5px;
     background-color: rgb(169, 207, 195);
 }
 
 /*PAGINA MAIN*/
 
 .pagina-main {
-    height: 100vh; /* 60% de la altura del viewport para desktop */
+    height: 100vh;
+    /* 60% de la altura del viewport para desktop */
     display: grid;
     /* Las columnas son 30% y 60% del ancho del contenedor .page-main.
-       Como .page-main tiene width: 100%, estas son efectivamente 30% y 60% del ancho de la página.
+    Como .page-main tiene width: 100%, estas son efectivamente 30% y 60% del ancho de la página.
        El 10% restante del ancho de .page-main quedará como espacio vacío a la derecha. */
     grid-template-columns: 20% 70%;
-    width: 100%; /* .page-main ocupa todo el ancho disponible */
-    overflow: hidden; /* Clave para que el contenido no desborde el 60vh de .page-main */
+    width: 100%;
+    /* .page-main ocupa todo el ancho disponible */
+    overflow: hidden;
+    /* Clave para que el contenido no desborde el 60vh de .page-main */
 }
 
 .filtros-en-columna {
     background-color: white;
     padding: 1.5em;
-    overflow-y: auto; /* Scroll vertical si los filtros son muchos */
-    height: 100%; /* Ocupa toda la altura de .page-main (que es 60vh) */
+    overflow-y: auto;
+    /* Scroll vertical si los filtros son muchos */
+    height: 100%;
+    /* Ocupa toda la altura de .page-main (que es 60vh) */
     border-right: 1px solid white;
 }
 
 .productos-en-columna {
     background-color: white;
     padding: 1.5em;
-    overflow-y: auto; /* Scroll vertical si los productos son muchos */
-    height: 100%; /* Ocupa toda la altura de .page-main (que es 60vh) */
+    overflow-y: auto;
+    /* Scroll vertical si los productos son muchos */
+    height: 100%;
+    /* Ocupa toda la altura de .page-main (que es 60vh) */
 }
 
 .galeriafotos {
@@ -154,70 +176,237 @@ text-align: right;
     justify-content: space-around;
 }
 
+.galeriafotos pre {
+    width: 200px;
+}
 
-/* ----- RESPONSIVE PARA CELULAR ----- */
+.galeriafotos-responsive {
+    display: none;
+}
+
+.productos-en-columna-responsive {
+    display: none;
+}
+
+/*PARTE RESPONSIVE*/
+
+/* Estilos para desktop (por defecto) */
+@media (min-width: 769px) {
+    .mobile-menu-button {
+        display: none;
+        /* Oculta el botón del menú en desktop */
+    }
+
+    .mobile-nav {
+        display: none !important;
+        /* Oculta el menú mobile en desktop */
+    }
+
+}
+
+/* Media query para dispositivos móviles (ancho máximo de 768px) */
 @media (max-width: 768px) {
-    /* Permitir que header, main y footer crezcan con su contenido */
-    .page-header,
-    .page-main,
-    .page-footer {
+
+    .links-de-escritorio {
+        display: none;
+        /* Oculta los links de desktop */
+    }
+
+    .mobile-menu-button {
+        display: block;
+        /* Muestra el botón del menú */
+    }
+
+    .mobile-nav {
+        display: block !important;
+        /* Muestra el menú mobile */
+        position: relative;
+        top: 100%;
+        /* Debajo de la barra de navegación */
+        left: 0;
+        width: 100%;
+        background-color: rgb(190, 98, 113);
+        z-index: 1000;
+    }
+
+    .mobile-nav .navbar-nav {
+        flex-direction: column;
+        /* Apila los links verticalmente */
+        padding: 10px;
+        transition: font-size 0.3s ease-in-out;
+    }
+
+    .mobile-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .mobile-nav .nav-link {
+        color: white !important;
+    }
+
+    .navbar-nav a:hover {
+        font-size: 1.3em;
+        text-decoration: underline
+    }
+
+    .navbar-nav a:active {
+        font-size: 1.3em;
+        color: white;
+        background-color: blue;
+    }
+
+    .navbar-nav a:visited {
+        font-size: 1.3em;
+    }
+
+    .mobile-nav .dropdown-menu {
+        flex-direction: column;
+        /* Apila los links verticalmente */
+        padding: 10px;
+        transition: font-size 0.3s ease-in-out;
+        color: #333333;
+    }
+
+    /*TITULO OTOÑO*/
+
+    .Titulo-otono {
+        display: grid;
+        /* La columna de texto ocupa el espacio restante */
+        place-items: center;
+    }
+
+    /*CONTENEDOR Y FOTO*/
+
+    .columna-titulo {
+        font-family: "Helvetica Neue";
+        font-size: 2em;
+        color: whitesmoke;
+        text-align: center;
+    }
+
+    .columna-titulo2 {
+        font: size 0.5em;
+        color: whitesmoke;
+        text-align: center;
+    }
+
+    .columna-texto {
+        display: grid;
+        /* La columna de texto ocupa el espacio restante */
+        place-items: center;
+        padding: 20px;
+        text-align: left;
+        background-color: rgb(190, 98, 113);
+        font-size: larger;
+        line-height: 1.2;
+    }
+
+    .columna-imagen {
+        display: none;
+    }
+
+    /*MAIN*/
+    /*FILTROS Y GALERIA DE FOTOS*/
+
+    .pagina-main {
+        width: 100vw;
+        height: 100vh;
+        /* 60% de la altura del viewport para desktop */
+        display: grid;
+        /* Las columnas son 30% y 60% del ancho del contenedor .page-main.
+    Como .page-main tiene width: 100%, estas son efectivamente 30% y 60% del ancho de la página.
+       El 10% restante del ancho de .page-main quedará como espacio vacío a la derecha. */
+        grid-template-columns: 0% 70%;
+        overflow: hidden;
+        /* Clave para que el contenido no desborde el 60vh de .page-main */
+    }
+
+    .filtros-en-columna {
+        display: none;
+        background-color: white;
+        padding: 1.5em;
+        overflow-y: auto;
+        /* Scroll vertical si los filtros son muchos */
+        height: 100%;
+        /* Ocupa toda la altura de .page-main (que es 60vh) */
+        border-right: 1px solid white;
+    }
+
+    .productos-en-columna {
+        background-color: white;
+        padding: 0.5em;
+        overflow-y: auto;
+        /* Scroll vertical si los productos son muchos */
+        height: 100%;
+        /* Ocupa toda la altura de .page-main (que es 60vh) */
+        width: 100vw;
+    }
+
+    .galeriafotos {
+        display: none;
+    }
+
+    .galeriafotos-responsive {
+        display: flex;
+        flex-wrap: wrap;
+        /* Permite que las fotos pasen a la siguiente línea si no hay suficiente espacio */
+        justify-content: space-around;
+        gap: 10px;
+        /* Espacio entre las fotos (horizontal y vertical) */
+        /
+    }
+
+    .image-wrapper {
+        position: relative;
+        /* Contenedor para el posicionamiento absoluto */
+        display: inline-block;
+        /* Para que el contenedor se ajuste al tamaño de la imagen */
+    }
+
+    .image-wrapper img {
+        display: block;
+        /* Elimina el espacio extra debajo de la imagen */
+        width: 320px;
+        /* Asegura que la imagen no exceda el ancho del contenedor */
         height: auto;
     }
 
-    .page-main {
-        display: flex; /* Cambiamos de grid a flex para apilar las columnas */
-        flex-direction: column;
-        /* La altura de 60vh ya no aplica, se ajustará al contenido */
-    }
-
-    .filters-column,
-    .products-column {
-        width: 100%; /* Cada columna ocupa todo el ancho */
-        height: auto; /* Altura se ajusta al contenido */
-        border-right: none; /* Quitar borde en layout de columna */
-        padding: 1em; /* Ajustar padding si es necesario */
-    }
-
-    .filters-column {
-        margin-bottom: 1.5em; /* Espacio entre filtros y productos al apilarse */
-        border-bottom: 1px solid #e0e0e0; /* Separador visual */
-    }
-
-    .product-gallery {
-        /* Ajustar el tamaño mínimo de los items para móviles */
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 1em;
-    }
-    .product-item img {
-        max-width: 120px;
-    }
-
-    .page-header h1 {
-        font-size: 1.8em;
-    }
-    .page-header p, .page-footer p {
-        font-size: 0.9em;
-    }
-}
-
-/* Ajustes para pantallas muy pequeñas (opcional) */
-@media (max-width: 480px) {
-    .product-gallery {
-        /* Podría ser una sola columna o dos más pequeñas */
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* O 1fr para una sola columna */
-    }
-    .product-item img {
-        max-width: 100px;
-    }
-
-    .page-header, .page-footer, .filters-column, .products-column {
-        padding: 0.8em;
-    }
-
-    .filters-column h2, .products-column h2 {
+    .image-text {
+        position: absolute;
+        top: 10px;
+        /* Ajusta la posición vertical */
+        left: 10px;
+        /* Ajusta la posición horizontal */
+        color: rgb(238, 204, 176);
         font-size: 1.2em;
+        font-weight: bolder;
+        text-shadow: 2px 2px 4px #080808;
+        ;
+        padding: 5px;
+        border-radius: 3px;
     }
-     .filter-group h3 {
-        font-size: 1em;
+
+    /*FOOTER*/
+    footer {
+        text-align: center;
+        font-size: clamp(1rem, 2vw, 2rem);
+        /* Escala entre 1rem y 2rem según el ancho de pantalla */
+        width: 100%;
     }
+
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .redes-sociales {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+
 }
