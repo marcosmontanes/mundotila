@@ -361,7 +361,7 @@ article {
         /* Contenedor para el posicionamiento absoluto */
         display: inline-block;
         /* Para que el contenedor se ajuste al tamaño de la imagen */
-    }
+}
 
     .image-wrapper img {
         display: block;
