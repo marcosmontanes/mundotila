@@ -1,17 +1,32 @@
 @font-face {
-    font-family: "Helvetica-Neue-light", sans-serif;
+    font-family: "Helvetica-Neue-light";
     src: url('../fonts/mi-fuente/HelveticaNeueLight.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    color: #333333;
 }
 
+
 body {
+    font-family: "helvetica-neue-light", sans-serif;
+    font-size: 1em;
     background-color: #fff;
     opacity: 1;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+h4 {
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    font-family: "Helvetica Neue";
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "helvetica-neue-light";
+    font-size: 16px;
 }
 
 /*HEADER*/
@@ -188,7 +203,13 @@ article {
     display: none;
 }
 
-/*PARTE RESPONSIVE*/
+/*FOOTER*/
+
+.palabra-color {
+        color: blue; /* O el color que prefieras */
+    }
+
+                                                /*PARTE RESPONSIVE*/
 
 /* Estilos para desktop (por defecto) */
 @media (min-width: 769px) {
@@ -408,5 +429,16 @@ article {
         margin-top: 10px;
     }
 
+    .contacto-main {
+        display: flex;
+        justify-content: left;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .palabra-color {
+        color: blue; /* O el color que prefieras */
+        font-weight: bold;
+    }
 
 }
