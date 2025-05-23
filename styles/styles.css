@@ -5,7 +5,6 @@
     font-style: normal;
 }
 
-
 body {
     font-family: "helvetica-neue-light", sans-serif;
     font-size: 1em;
@@ -29,14 +28,9 @@ p {
     font-size: 16px;
 }
 
-
-
-/*HEADER*/
-
+/* HEADER */
 .logo {
     text-align: center;
-    height: 140 px;
-    width: 140 px;
 }
 
 .titulodepagina {
@@ -52,38 +46,31 @@ article {
     text-align: right;
 }
 
-/*LISTA DE LINKS*/
-
+/* LISTA DE LINKS */
 .links-de-escritorio {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* O space-around / space-evenly */
     align-items: center;
-    /* Para alinear verticalmente los li si tuvieran alturas diferentes */
     list-style-type: none;
-    /* Quita los puntos de la lista */
     padding: 0;
-    /* Quita el padding por defecto del ul */
     margin: 0;
-    /* Quita el margen por defecto del ul */
     width: 100%;
 }
 
 .links-de-escritorio a {
     display: block;
-    /* Para que el padding funcione correctamente si lo añades al 'a' */
     padding: 10px;
     text-decoration: none;
     color: black;
-    font-style: "Helvetica-Neue-light", sans-serif;
+    font-family: "Helvetica-Neue-light", sans-serif;
     font-size: 1em;
     transition: font-size 0.3s ease-in-out;
 }
 
 .links-de-escritorio a:hover {
     font-size: 1.3em;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .links-de-escritorio a:active {
@@ -98,18 +85,13 @@ article {
 
 .contenedor {
     display: flex;
-    /* Utilizamos Flexbox para el dise�o de columnas */
     width: 80%;
-    /* Ancho del contenedor principal (ajusta seg�n necesites) */
     margin: 20px auto;
-    /* Centra el contenedor en la p�gina */
     border: 1px solid #ccc;
-    /* Borde de ejemplo para visualizar el contenedor */
 }
 
 .columna-texto {
     flex: 1;
-    /* La columna de texto ocupa el espacio restante */
     padding: 20px;
     background-color: rgb(190, 98, 113);
     font-size: larger;
@@ -124,58 +106,42 @@ article {
 
 .columna-imagen {
     width: 400px;
-    /* Ancho fijo para la columna de la imagen (ajusta seg�n necesites) */
 }
 
 .columna-imagen img {
     display: block;
-    /* Evita espacios extra debajo de la imagen */
     width: 100%;
-    /* La imagen ocupa todo el ancho de su contenedor */
     height: 100%;
-    /* La imagen ocupa toda la altura de su contenedor */
     object-fit: cover;
-    /* La imagen se ajusta al contenedor manteniendo su proporci�n y recortando si es necesario */
 }
 
-/*TITULO OTOÑO*/
-
+/* TITULO OTOÑO */
 .Titulo-otono {
     display: grid;
-    /* La columna de texto ocupa el espacio restante */
     place-items: center;
     text-align: center;
     color: antiquewhite;
     font-size: 2em;
-    border: 1px solid brgb(169, 207, 195);
-    margin: auto auto auto auto;
+    border: 1px solid rgb(169, 207, 195);
+    margin: auto;
     padding: 5px 5px;
     background-color: rgb(169, 207, 195);
 }
 
-/*PAGINA MAIN*/
-
+/* PAGINA MAIN */
 .pagina-main {
     height: 100vh;
-    /* 60% de la altura del viewport para desktop */
     display: grid;
-    /* Las columnas son 30% y 60% del ancho del contenedor .page-main.
-    Como .page-main tiene width: 100%, estas son efectivamente 30% y 60% del ancho de la página.
-       El 10% restante del ancho de .page-main quedará como espacio vacío a la derecha. */
     grid-template-columns: 20% 70%;
     width: 100%;
-    /* .page-main ocupa todo el ancho disponible */
     overflow: hidden;
-    /* Clave para que el contenido no desborde el 60vh de .page-main */
 }
 
 .filtros-en-columna {
     background-color: white;
     padding: 1.5em;
     overflow-y: auto;
-    /* Scroll vertical si los filtros son muchos */
     height: 100%;
-    /* Ocupa toda la altura de .page-main (que es 60vh) */
     border-right: 1px solid white;
 }
 
@@ -183,9 +149,7 @@ article {
     background-color: white;
     padding: 1.5em;
     overflow-y: auto;
-    /* Scroll vertical si los productos son muchos */
     height: 100%;
-    /* Ocupa toda la altura de .page-main (que es 60vh) */
 }
 
 .galeriafotos {
@@ -205,55 +169,46 @@ article {
     display: none;
 }
 
-/*FOOTER*/
-
+/* FOOTER */
 .newsletter {
     gap: 10px;
     margin-top: 10px;
 }
 
 .palabra-color {
-        color: blue; /* O el color que prefieras */
-    }
+    color: blue;
+}
 
-                                                /*PARTE RESPONSIVE*/
+/* PARTE RESPONSIVE */
 
 /* Estilos para desktop (por defecto) */
 @media (min-width: 769px) {
     .mobile-menu-button {
         display: none;
-        /* Oculta el botón del menú en desktop */
     }
 
     .mobile-nav {
         display: none !important;
-        /* Oculta el menú mobile en desktop */
     }
 
+    footer {
+        margin-left: 20px;
+    }
 }
 
-footer {
-    margin-left: 20px;
-    mar
-}
-
-/* Media query para dispositivos móviles (ancho máximo de 768px)  MOVILES!!!        */
+/* Media query para dispositivos móviles (ancho máximo de 768px) */
 @media (max-width: 768px) {
-
     .links-de-escritorio {
         display: none;
-        /* Oculta los links de desktop */
     }
 
     .mobile-menu-button {
         display: block;
-        /* Muestra el botón del menú */
     }
 
     .mobile-nav {
         position: relative;
         top: 100%;
-        /* Debajo de la barra de navegación */
         left: 0;
         width: 100%;
         background-color: rgb(190, 98, 113);
@@ -262,7 +217,6 @@ footer {
 
     .mobile-nav .navbar-nav {
         flex-direction: column;
-        /* Apila los links verticalmente */
         padding: 10px;
         transition: font-size 0.3s ease-in-out;
     }
@@ -277,7 +231,7 @@ footer {
 
     .navbar-nav a:hover {
         font-size: 1.3em;
-        text-decoration: underline
+        text-decoration: underline;
     }
 
     .navbar-nav a:active {
@@ -292,22 +246,18 @@ footer {
 
     .mobile-nav .dropdown-menu {
         flex-direction: column;
-        /* Apila los links verticalmente */
         padding: 10px;
         transition: font-size 0.3s ease-in-out;
         color: #333333;
     }
 
-    /*TITULO OTOÑO*/
-
+    /* TITULO OTOÑO */
     .Titulo-otono {
         display: grid;
-        /* La columna de texto ocupa el espacio restante */
         place-items: center;
     }
 
-    /*CONTENEDOR Y FOTO*/
-
+    /* CONTENEDOR Y FOTO */
     .columna-titulo {
         font-family: "Helvetica Neue";
         font-size: 2em;
@@ -316,14 +266,13 @@ footer {
     }
 
     .columna-titulo2 {
-        font: size 0.5em;
+        font-size: 0.5em;
         color: whitesmoke;
         text-align: center;
     }
 
     .columna-texto {
         display: grid;
-        /* La columna de texto ocupa el espacio restante */
         place-items: center;
         padding: 20px;
         text-align: left;
@@ -336,20 +285,13 @@ footer {
         display: none;
     }
 
-    /*MAIN*/
-    /*FILTROS Y GALERIA DE FOTOS*/
-
+    /* MAIN */
     .pagina-main {
         width: 100vw;
         height: 100vh;
-        /* 60% de la altura del viewport para desktop */
         display: grid;
-        /* Las columnas son 30% y 60% del ancho del contenedor .page-main.
-    Como .page-main tiene width: 100%, estas son efectivamente 30% y 60% del ancho de la página.
-       El 10% restante del ancho de .page-main quedará como espacio vacío a la derecha. */
         grid-template-columns: 0% 70%;
         overflow: hidden;
-        /* Clave para que el contenido no desborde el 60vh de .page-main */
     }
 
     .filtros-en-columna {
@@ -357,9 +299,7 @@ footer {
         background-color: white;
         padding: 1.5em;
         overflow-y: auto;
-        /* Scroll vertical si los filtros son muchos */
         height: 100%;
-        /* Ocupa toda la altura de .page-main (que es 60vh) */
         border-right: 1px solid white;
     }
 
@@ -367,9 +307,7 @@ footer {
         background-color: white;
         padding: 0.5em;
         overflow-y: auto;
-        /* Scroll vertical si los productos son muchos */
         height: 100%;
-        /* Ocupa toda la altura de .page-main (que es 60vh) */
         width: 100vw;
     }
 
@@ -380,48 +318,37 @@ footer {
     .galeriafotos-responsive {
         display: flex;
         flex-wrap: wrap;
-        /* Permite que las fotos pasen a la siguiente línea si no hay suficiente espacio */
         justify-content: space-around;
         gap: 10px;
-        /* Espacio entre las fotos (horizontal y vertical) */
-        /
     }
 
     .image-wrapper {
         position: relative;
-        /* Contenedor para el posicionamiento absoluto */
         display: inline-block;
-        /* Para que el contenedor se ajuste al tamaño de la imagen */
-}
+    }
 
     .image-wrapper img {
         display: block;
-        /* Elimina el espacio extra debajo de la imagen */
         width: 320px;
-        /* Asegura que la imagen no exceda el ancho del contenedor */
         height: auto;
     }
 
     .image-text {
         position: absolute;
         top: 10px;
-        /* Ajusta la posición vertical */
         left: 10px;
-        /* Ajusta la posición horizontal */
         color: rgb(238, 204, 176);
         font-size: 1.2em;
         font-weight: bolder;
         text-shadow: 2px 2px 4px #080808;
-        ;
         padding: 5px;
         border-radius: 3px;
     }
 
-    /*FOOTER*/
+    /* FOOTER */
     footer {
         text-align: center;
         font-size: clamp(1rem, 2vw, 2rem);
-        /* Escala entre 1rem y 2rem según el ancho de pantalla */
         width: 100%;
     }
 
@@ -443,10 +370,4 @@ footer {
         gap: 40px;
         margin-top: 20px;
     }
-
-    .palabra-color {
-        color: blue; /* O el color que prefieras */
-        font-weight: bold;
-    }
-
 }
