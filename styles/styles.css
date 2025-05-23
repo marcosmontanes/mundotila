@@ -225,7 +225,7 @@ article {
 
 }
 
-/* Media query para dispositivos móviles (ancho máximo de 768px) */
+/* Media query para dispositivos móviles (ancho máximo de 768px)  MOVILES!!!        */
 @media (max-width: 768px) {
 
     .links-de-escritorio {
@@ -239,8 +239,6 @@ article {
     }
 
     .mobile-nav {
-        display: block !important;
-        /* Muestra el menú mobile */
         position: relative;
         top: 100%;
         /* Debajo de la barra de navegación */
