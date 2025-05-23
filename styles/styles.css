@@ -29,6 +29,8 @@ p {
     font-size: 16px;
 }
 
+
+
 /*HEADER*/
 
 .logo {
@@ -205,6 +207,11 @@ article {
 
 /*FOOTER*/
 
+.newsletter {
+    gap: 10px;
+    margin-top: 10px;
+}
+
 .palabra-color {
         color: blue; /* O el color que prefieras */
     }
@@ -223,6 +230,11 @@ article {
         /* Oculta el menú mobile en desktop */
     }
 
+}
+
+footer {
+    margin-left: 20px;
+    mar
 }
 
 /* Media query para dispositivos móviles (ancho máximo de 768px)  MOVILES!!!        */
@@ -414,8 +426,6 @@ article {
     }
 
     .newsletter {
-        display: flex;
-        justify-content: center;
         gap: 10px;
         margin-top: 10px;
     }
