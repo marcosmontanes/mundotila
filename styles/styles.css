@@ -104,11 +104,17 @@ article {
     color: whitesmoke;
 }
 
+.columna-titulo2 pre {
+    font-size: 1em;
+    color: whitesmoke;
+    text-align: center;
+}
+
 .columna-imagen {
     width: 400px;
 }
 
-.columna-imagen img {
+.columna-imagen video {
     display: block;
     width: 100%;
     height: 100%;
@@ -145,6 +151,60 @@ article {
     border-right: 1px solid white;
 }
 
+.filter-group ul{
+
+/*¡Perfecto! Si quieres que el **fondo del checkbox** (no solo el tilde, sino el cuadrado entero) tenga el color correspondiente al nombre, puedes hacerlo con CSS personalizado y pseudo-elementos.  
+Aquí tienes un ejemplo para lograrlo:
+
+````css*/
+
+/* Oculta el checkbox nativo */
+input[type="checkbox"][name="color"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #888;
+    border-radius: 4px;
+    margin-right: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+/* Colorea el fondo según el valor */
+input[type="checkbox"][value="rojo"] { background: red; }
+input[type="checkbox"][value="azul"] { background: blue; }
+input[type="checkbox"][value="verde"] { background: green; }
+input[type="checkbox"][value="negro"] { background: black; }
+input[type="checkbox"][value="blanco"] { background: #fff; }
+input[type="checkbox"][value="gris"] { background: gray; }
+
+/* Opcional: cambia el borde para blanco */
+input[type="checkbox"][value="blanco"] { border: 2px solid #888; }
+
+/* Muestra tilde cuando está seleccionado */
+input[type="checkbox"][name="color"]:checked::after {
+    content: "✔";
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    left: 2px;
+    top: -2px;
+}
+input[type="checkbox"][value="blanco"]:checked::after {
+    color: #333;
+}
+
+/*
+**¿Cómo funciona?**
+- Oculta el checkbox nativo y lo reemplaza por un cuadrado coloreado.
+- El color de fondo depende del valor del checkbox.
+- Al seleccionar, aparece un tilde encima.
+
+*/
+}
 .productos-en-columna {
     background-color: white;
     padding: 1.5em;
@@ -156,6 +216,14 @@ article {
     display: flex;
     justify-content: space-around;
 }
+
+figure {
+    width: 200px;
+    height: auto;
+    text-align: center;
+    font-size: 1em;
+}
+
 
 .galeriafotos pre {
     width: 200px;
