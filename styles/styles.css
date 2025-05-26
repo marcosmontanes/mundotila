@@ -1,464 +1,401 @@
+@charset "UTF-8";
 @font-face {
-    font-family: "Helvetica-Neue-light";
-    src: url('../fonts/mi-fuente/HelveticaNeueLight.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Helvetica-Neue-light";
+  src: url("../fonts/mi-fuente/HelveticaNeueLight.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
-
 body {
-    font-family: "helvetica-neue-light", sans-serif;
-    font-size: 1em;
-    background-color: #fff;
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: "Helvetica-Neue-light", sans-serif;
+  font-size: 1em;
+  background-color: #fff;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h4 {
-    font-size: 1em;
-    color: rgb(0, 0, 0);
-    font-family: "Helvetica Neue";
-    font-weight: 400;
-    font-style: normal;
+  font-size: 1em;
+  color: black;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-style: normal;
 }
 
 p {
-    font-family: "helvetica-neue-light";
-    font-size: 16px;
+  font-family: "Helvetica-Neue-light", sans-serif;
+  font-size: 16px;
 }
 
-/* HEADER */
 .logo {
-    text-align: center;
+  text-align: center;
 }
 
 .titulodepagina {
-    text-align: center;
-    font-size: 2em;
-    color: rgb(190, 98, 113);
-    font-family: "Helvetica Neue";
-    font-weight: 900;
-    font-style: normal;
+  text-align: center;
+  font-size: 2em;
+  color: rgb(190, 98, 113);
+  font-family: "Helvetica Neue";
+  font-weight: 900;
+  font-style: normal;
 }
 
 article {
-    text-align: right;
+  text-align: right;
 }
 
-/* LISTA DE LINKS */
 .links-de-escritorio {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
-
 .links-de-escritorio a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    font-family: "Helvetica-Neue-light", sans-serif;
-    font-size: 1em;
-    transition: font-size 0.3s ease-in-out;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-family: "Helvetica-Neue-light", sans-serif;
+  font-size: 1em;
+  transition: font-size 0.3s ease-in-out;
 }
-
 .links-de-escritorio a:hover {
-    font-size: 1.3em;
-    text-decoration: underline;
+  font-size: 1.3em;
+  text-decoration: underline;
 }
-
 .links-de-escritorio a:active {
-    font-size: 1.3em;
-    color: white;
-    background-color: blue;
+  font-size: 1.3em;
+  color: white;
+  background-color: blue;
 }
-
 .links-de-escritorio a:visited {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .contenedor {
-    display: flex;
-    width: 80%;
-    margin: 20px auto;
-    border: 1px solid #ccc;
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
 }
 
 .columna-texto {
-    flex: 1;
-    padding: 20px;
-    background-color: rgb(190, 98, 113);
-    font-size: larger;
-    text-align: center;
-    line-height: 1.2;
+  flex: 1;
+  padding: 20px;
+  background-color: rgb(190, 98, 113);
+  font-size: larger;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .columna-titulo {
-    font-size: 1.5em;
-    color: whitesmoke;
+  font-size: 1.5em;
+  color: whitesmoke;
 }
 
 .columna-titulo2 pre {
-    font-size: 1em;
-    color: whitesmoke;
-    text-align: center;
+  font-size: 1em;
+  color: whitesmoke;
+  text-align: center;
 }
 
 .columna-imagen {
-    width: 400px;
+  width: 400px;
 }
-
 .columna-imagen video {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* TITULO OTOÑO */
 .Titulo-otono {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    color: antiquewhite;
-    font-size: 2em;
-    border: 1px solid rgb(169, 207, 195);
-    margin: auto;
-    padding: 5px 5px;
-    background-color: rgb(169, 207, 195);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: antiquewhite;
+  font-size: 2em;
+  border: 1px solid rgb(169, 207, 195);
+  margin: auto;
+  padding: 5px 5px;
+  background-color: rgb(169, 207, 195);
 }
 
-/* PAGINA MAIN */
 .pagina-main {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 20% 70%;
-    width: 100%;
-    overflow: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 70%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .filtros-en-columna {
+  background-color: white;
+  padding: 1.5em;
+  overflow-y: auto;
+  height: 100%;
+  border-right: 1px solid white;
+}
+
+.filter-group ul input[type=checkbox][name=color] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #888;
+  border-radius: 4px;
+  margin-right: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.filter-group ul input[type=checkbox][name=color][value=rojo] {
+  background: red;
+}
+.filter-group ul input[type=checkbox][name=color][value=azul] {
+  background: blue;
+}
+.filter-group ul input[type=checkbox][name=color][value=verde] {
+  background: green;
+}
+.filter-group ul input[type=checkbox][name=color][value=negro] {
+  background: black;
+}
+.filter-group ul input[type=checkbox][name=color][value=blanco] {
+  background: #fff;
+  border: 2px solid #888;
+}
+.filter-group ul input[type=checkbox][name=color][value=gris] {
+  background: gray;
+}
+.filter-group ul input[type=checkbox][name=color]:checked::after {
+  content: "✔";
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  left: 2px;
+  top: -2px;
+}
+.filter-group ul input[type=checkbox][name=color][value=blanco]:checked::after {
+  color: #333;
+}
+
+.productos-en-columna {
+  background-color: white;
+  padding: 1.5em;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.galeriafotos {
+  display: flex;
+  justify-content: space-around;
+}
+.galeriafotos pre {
+  width: 200px;
+}
+
+figure {
+  width: 200px;
+  height: auto;
+  text-align: center;
+  font-size: 1em;
+}
+
+.galeriafotos-responsive,
+.productos-en-columna-responsive {
+  display: none;
+}
+
+.newsletter {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.palabra-color {
+  color: blue;
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-button {
+    display: none;
+  }
+  .mobile-nav {
+    display: none !important;
+  }
+  .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+  .header-search-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  .header-search-text {
+    margin: 0;
+    padding: 0 4px;
+    white-space: nowrap;
+  }
+  footer {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .links-de-escritorio {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
+  .mobile-nav {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(190, 98, 113);
+    z-index: 1000;
+  }
+  .mobile-nav .navbar-nav {
+    flex-direction: column;
+    padding: 10px;
+    transition: font-size 0.3s ease-in-out;
+  }
+  .mobile-nav .navbar-nav a:hover {
+    font-size: 1.3em;
+    text-decoration: underline;
+  }
+  .mobile-nav .navbar-nav a:active {
+    font-size: 1.3em;
+    color: white;
+    background-color: blue;
+  }
+  .mobile-nav .navbar-nav a:visited {
+    font-size: 1.3em;
+  }
+  .mobile-nav .nav-item {
+    margin: 5px 0;
+  }
+  .mobile-nav .nav-link {
+    color: white !important;
+  }
+  .mobile-nav .dropdown-menu {
+    flex-direction: column;
+    padding: 10px;
+    transition: font-size 0.3s ease-in-out;
+    color: #333333;
+  }
+  .header-search-text {
+    display: none;
+    margin: 0;
+    padding: 0 4px;
+    white-space: nowrap;
+  }
+  .Titulo-otono {
+    display: grid;
+    place-items: center;
+  }
+  .columna-titulo {
+    font-family: "Helvetica Neue";
+    font-size: 2em;
+    color: whitesmoke;
+    text-align: center;
+  }
+  .columna-titulo2 {
+    font-size: 0.5em;
+    color: whitesmoke;
+    text-align: center;
+  }
+  .columna-texto {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    text-align: left;
+    background-color: rgb(190, 98, 113);
+    font-size: larger;
+    line-height: 1.2;
+  }
+  .columna-imagen {
+    display: none;
+  }
+  .pagina-main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0% 70%;
+    overflow: hidden;
+  }
+  .filtros-en-columna {
+    display: none;
     background-color: white;
     padding: 1.5em;
     overflow-y: auto;
     height: 100%;
     border-right: 1px solid white;
-}
-
-.filter-group ul{
-
-/*¡Perfecto! Si quieres que el **fondo del checkbox** (no solo el tilde, sino el cuadrado entero) tenga el color correspondiente al nombre, puedes hacerlo con CSS personalizado y pseudo-elementos.  
-Aquí tienes un ejemplo para lograrlo:
-
-````css*/
-
-/* Oculta el checkbox nativo */
-input[type="checkbox"][name="color"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #888;
-    border-radius: 4px;
-    margin-right: 6px;
-    vertical-align: middle;
-    cursor: pointer;
-    outline: none;
-    transition: box-shadow 0.2s;
-}
-
-/* Colorea el fondo según el valor */
-input[type="checkbox"][value="rojo"] { background: red; }
-input[type="checkbox"][value="azul"] { background: blue; }
-input[type="checkbox"][value="verde"] { background: green; }
-input[type="checkbox"][value="negro"] { background: black; }
-input[type="checkbox"][value="blanco"] { background: #fff; }
-input[type="checkbox"][value="gris"] { background: gray; }
-
-/* Opcional: cambia el borde para blanco */
-input[type="checkbox"][value="blanco"] { border: 2px solid #888; }
-
-/* Muestra tilde cuando está seleccionado */
-input[type="checkbox"][name="color"]:checked::after {
-    content: "✔";
-    color: #fff;
-    font-size: 14px;
-    position: relative;
-    left: 2px;
-    top: -2px;
-}
-input[type="checkbox"][value="blanco"]:checked::after {
-    color: #333;
-}
-
-/*
-**¿Cómo funciona?**
-- Oculta el checkbox nativo y lo reemplaza por un cuadrado coloreado.
-- El color de fondo depende del valor del checkbox.
-- Al seleccionar, aparece un tilde encima.
-
-*/
-}
-.productos-en-columna {
+  }
+  .productos-en-columna {
     background-color: white;
-    padding: 1.5em;
+    padding: 0.5em;
     overflow-y: auto;
     height: 100%;
-}
-
-.galeriafotos {
+    width: 100vw;
+  }
+  .galeriafotos {
+    display: none;
+  }
+  .galeriafotos-responsive {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-}
-
-figure {
-    width: 200px;
+    gap: 10px;
+  }
+  .image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .image-wrapper img {
+    display: block;
+    width: 320px;
     height: auto;
+  }
+  .image-wrapper .image-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgb(238, 204, 176);
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #080808;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  footer {
     text-align: center;
-    font-size: 1em;
-}
-
-
-.galeriafotos pre {
-    width: 200px;
-}
-
-.galeriafotos-responsive {
-    display: none;
-}
-
-.productos-en-columna-responsive {
-    display: none;
-}
-
-/* FOOTER */
-.newsletter {
+    font-size: clamp(1rem, 2vw, 2rem);
+    width: 100%;
+  }
+  .newsletter {
     gap: 10px;
     margin-top: 10px;
-}
-
-.palabra-color {
-    color: blue;
-}
-
-/* PARTE RESPONSIVE */
-
-/* Estilos para desktop (por defecto) */
-@media (min-width: 769px) {
-    .mobile-menu-button {
-        display: none;
-    }
-
-    .mobile-nav {
-        display: none !important;
-    }
-
-.container-fluid {
+  }
+  .redes-sociales {
     display: flex;
-    align-items: center;
-}
-.header-search-container {
-    margin-left: auto;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .contacto-main {
     display: flex;
-    align-items: center;
-}
-.header-search-text {
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0 4px;
-    white-space: nowrap; /* Evita saltos de línea */
+    justify-content: left;
+    gap: 40px;
+    margin-top: 20px;
+  }
 }
 
-
-    footer {
-        margin-left: 20px;
-    }
-}
-
-/* Media query para dispositivos móviles (ancho máximo de 768px) */
-@media (max-width: 768px) {
-    .links-de-escritorio {
-        display: none;
-    }
-
-    .mobile-menu-button {
-        display: block;
-    }
-
-    .mobile-nav {
-        position: relative;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgb(190, 98, 113);
-        z-index: 1000;
-    }
-
-    .mobile-nav .navbar-nav {
-        flex-direction: column;
-        padding: 10px;
-        transition: font-size 0.3s ease-in-out;
-    }
-
-    .mobile-nav .nav-item {
-        margin: 5px 0;
-    }
-
-    .mobile-nav .nav-link {
-        color: white !important;
-    }
-
-    .navbar-nav a:hover {
-        font-size: 1.3em;
-        text-decoration: underline;
-    }
-
-    .navbar-nav a:active {
-        font-size: 1.3em;
-        color: white;
-        background-color: blue;
-    }
-
-    .navbar-nav a:visited {
-        font-size: 1.3em;
-    }
-
-    .mobile-nav .dropdown-menu {
-        flex-direction: column;
-        padding: 10px;
-        transition: font-size 0.3s ease-in-out;
-        color: #333333;
-    }
-
-    .header-search-text {
-    display: none;
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0 4px;
-    white-space: nowrap; /* Evita saltos de línea */
-}
-
-    /* TITULO OTOÑO */
-    .Titulo-otono {
-        display: grid;
-        place-items: center;
-    }
-
-    /* CONTENEDOR Y FOTO */
-    .columna-titulo {
-        font-family: "Helvetica Neue";
-        font-size: 2em;
-        color: whitesmoke;
-        text-align: center;
-    }
-
-    .columna-titulo2 {
-        font-size: 0.5em;
-        color: whitesmoke;
-        text-align: center;
-    }
-
-    .columna-texto {
-        display: grid;
-        place-items: center;
-        padding: 20px;
-        text-align: left;
-        background-color: rgb(190, 98, 113);
-        font-size: larger;
-        line-height: 1.2;
-    }
-
-    .columna-imagen {
-        display: none;
-    }
-
-    /* MAIN */
-    .pagina-main {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 0% 70%;
-        overflow: hidden;
-    }
-
-    .filtros-en-columna {
-        display: none;
-        background-color: white;
-        padding: 1.5em;
-        overflow-y: auto;
-        height: 100%;
-        border-right: 1px solid white;
-    }
-
-    .productos-en-columna {
-        background-color: white;
-        padding: 0.5em;
-        overflow-y: auto;
-        height: 100%;
-        width: 100vw;
-    }
-
-    .galeriafotos {
-        display: none;
-    }
-
-    .galeriafotos-responsive {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 10px;
-    }
-
-    .image-wrapper {
-        position: relative;
-        display: inline-block;
-    }
-
-    .image-wrapper img {
-        display: block;
-        width: 320px;
-        height: auto;
-    }
-
-    .image-text {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: rgb(238, 204, 176);
-        font-size: 1.2em;
-        font-weight: bolder;
-        text-shadow: 2px 2px 4px #080808;
-        padding: 5px;
-        border-radius: 3px;
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        font-size: clamp(1rem, 2vw, 2rem);
-        width: 100%;
-    }
-
-    .newsletter {
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .redes-sociales {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .contacto-main {
-        display: flex;
-        justify-content: left;
-        gap: 40px;
-        margin-top: 20px;
-    }
-}
+/*# sourceMappingURL=styles.css.map */
