@@ -259,6 +259,22 @@ figure {
         display: none !important;
     }
 
+.container-fluid {
+    display: flex;
+    align-items: center;
+}
+.header-search-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.header-search-text {
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0 4px;
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+
     footer {
         margin-left: 20px;
     }
@@ -318,6 +334,13 @@ figure {
         transition: font-size 0.3s ease-in-out;
         color: #333333;
     }
+
+    .header-search-text {
+    display: none;
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0 4px;
+    white-space: nowrap; /* Evita saltos de línea */
+}
 
     /* TITULO OTOÑO */
     .Titulo-otono {
