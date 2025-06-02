@@ -1,0 +1,146 @@
+// Variables
+$color-principal: rgb(190, 98, 113);
+$redes: (
+  whatsapp: #128c7e,
+  facebook: #3b5998,
+  instagram: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4)
+);
+
+// Fuente
+@font-face {
+  font-family: "Queensila";
+  src: url("../fonts/mi-fuente/Queensila.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul { list-style: none; }
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 16px 0 0 0;
+  padding-left: 0;
+
+  .icon-content {
+    margin: 0 10px;
+    position: relative;
+
+    a {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+      color: inherit;
+
+      &:hover {
+        box-shadow: 3px 2px 45px 0 rgb(0 0 0 / 12%);
+        color: white;
+      }
+
+      svg {
+        position: relative;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+      }
+
+      .filled {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #000;
+        transition: all 0.3s;
+      }
+      &:hover .filled { height: 100%; }
+
+      // Colores de redes sociales
+      @each $name, $color in $redes {
+        &[data-social="#{$name}"] {
+          .filled { background: $color; }
+          & ~ .tooltip { background: $color; }
+        }
+      }
+    }
+
+    .tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    &:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+      top: -50px;
+    }
+  }
+}
+
+// Botón animado
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  --border-right: 6px;
+  --text-stroke-color: #{$color-principal};
+  --animation-color: #{$color-principal};
+  --fs-size: calc(1.375rem + 1.5vw);
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Queensila", sans-serif;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+
+  .actual-text, .hover-text {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  .actual-text {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  .hover-text {
+    color: var(--animation-color);
+    width: 0%;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  &:hover {
+    .hover-text {
+      width: 100%;
+      filter: drop-shadow(0 0 23px var(--animation-color));
+    }
+    .actual-text {
+      color: transparent;
+      width: 0%;
+    }
+  }
+}
+
+// Animaciones //
+@import 'animaciones';

@@ -5,6 +5,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Queensila";
+  src: url("../fonts/mi-fuente/quensila.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Helvetica-Neue-light", sans-serif;
   font-size: 1em;
@@ -12,6 +18,8 @@ body {
   opacity: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   min-height: 100vh;
 }
 
@@ -79,6 +87,9 @@ article {
 
 .contenedor {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   width: 80%;
   margin: 20px auto;
   border: 1px solid #ccc;
@@ -153,7 +164,7 @@ article {
   vertical-align: middle;
   cursor: pointer;
   outline: none;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s ease-in-out;
 }
 .filter-group ul input[type=checkbox][name=color][value=rojo] {
   background: red;
@@ -195,7 +206,9 @@ article {
 
 .galeriafotos {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: stretch;
 }
 .galeriafotos pre {
   width: 200px;
@@ -231,11 +244,15 @@ figure {
   }
   .container-fluid {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
   .header-search-container {
     margin-left: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
   .header-search-text {
