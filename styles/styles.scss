@@ -152,12 +152,14 @@ article {
   display: grid;
   place-items: center;
   text-align: center;
-  color: $color-titulo;
-  font-size: 2em;
-  border: 1px solid $color-secundario;
+  color: $color-principal;
+  --fs-size: 2em;
+  font-size: var(--fs-size);
+  text-transform: uppercase;
+  border: 1px solid $color-fondo;
   margin: auto;
   padding: 5px 5px;
-  background-color: $color-secundario;
+  background-color: $color-fondo;
 }
 
 // PAGINA MAIN
@@ -255,6 +257,7 @@ figure {
 @media (min-width: 769px) {
   .mobile-menu-button { display: none; }
   .mobile-nav { display: none !important; }
+  .Titulo-otono { display: none; }
   .container-fluid { @include flex-center(row, flex-start, center); }
   .header-search-container { margin-left: auto; @include flex-center(row, flex-start, center); }
   .header-search-text { margin: 0; padding: 0 4px; white-space: nowrap; }
@@ -263,6 +266,8 @@ figure {
 
 @media (max-width: 768px) {
   .links-de-escritorio { display: none; }
+  .titulodepagina { display: none;}
+  .Titulo-otono { display: block; }
   .mobile-menu-button { display: block; }
   .mobile-nav {
     position: relative;
@@ -317,7 +322,7 @@ figure {
     color: whitesmoke;
     text-align: center;
   }
-  .columna-titulo2 { font-size: 0.5em; color: whitesmoke; text-align: center; }
+  .columna-titulo2 { font-size: calc(0.3rem + 1.5vw); color: whitesmoke; text-align: center; }
   .columna-texto {
     display: grid;
     place-items: center;
@@ -430,7 +435,6 @@ $color-principal: rgb(190, 98, 113);
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
-
 // this is the text, when you hover on button
 .hover-text {
   position: absolute;

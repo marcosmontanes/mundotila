@@ -129,12 +129,14 @@ article {
   display: grid;
   place-items: center;
   text-align: center;
-  color: antiquewhite;
-  font-size: 2em;
-  border: 1px solid rgb(169, 207, 195);
+  color: rgb(190, 98, 113);
+  --fs-size: 2em;
+  font-size: var(--fs-size);
+  text-transform: uppercase;
+  border: 1px solid #fff;
   margin: auto;
   padding: 5px 5px;
-  background-color: rgb(169, 207, 195);
+  background-color: #fff;
 }
 
 .pagina-main {
@@ -242,6 +244,9 @@ figure {
   .mobile-nav {
     display: none !important;
   }
+  .Titulo-otono {
+    display: none;
+  }
   .container-fluid {
     display: flex;
     flex-direction: row;
@@ -267,6 +272,12 @@ figure {
 @media (max-width: 768px) {
   .links-de-escritorio {
     display: none;
+  }
+  .titulodepagina {
+    display: none;
+  }
+  .Titulo-otono {
+    display: block;
   }
   .mobile-menu-button {
     display: block;
@@ -325,7 +336,7 @@ figure {
     text-align: center;
   }
   .columna-titulo2 {
-    font-size: 0.5em;
+    font-size: calc(0.3rem + 1.5vw);
     color: whitesmoke;
     text-align: center;
   }
