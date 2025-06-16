@@ -400,3 +400,154 @@ figure {
     margin-top: 20px;
   }
 }
+
+// ===============================
+// Animaciones y botones
+// ===============================
+
+// Variables
+$color-principal: rgb(190, 98, 113);
+
+.button {
+  // === removing default button style ===
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+
+  // button styling
+  --border-right: 6px;
+  --text-stroke-color: #{$color-principal};
+  --animation-color: #{$color-principal};
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+// this is the text, when you hover on button
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+// hover
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 5px 23px var(--animation-color));
+}
+
+// Variables para colores de redes sociales
+$redes: (
+  whatsapp: #128c7e,
+  facebook: #3b5998,
+  instagram: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  ),
+  youtube: #ff0000
+);
+
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon-content {
+    margin: 0 10px;
+    position: relative;
+
+    .tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    &:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+      top: -50px;
+    }
+
+    a {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: #4d4d4d;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+        color: white;
+      }
+
+      svg {
+        position: relative;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+      }
+
+      .filled {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #000;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover .filled {
+        height: 100%;
+      }
+
+      // Colores de redes sociales usando @each
+      @each $name, $color in $redes {
+        &[data-social="#{$name}"] {
+          .filled { background: $color; }
+          & ~ .tooltip { background: $color; }
+        }
+      }
+    }
+  }
+}
+
