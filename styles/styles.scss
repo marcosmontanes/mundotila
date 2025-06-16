@@ -59,7 +59,27 @@ p {
 }
 
 .logo {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 80px;
+  }
 }
 
 .titulodepagina {
@@ -275,6 +295,7 @@ figure {
 }
 
 @media (max-width: 768px) {
+  h1 {font-size: calc(1.1rem + 1.5vw);}
   .links-de-escritorio { display: none; }
   .titulodepagina { display: none;}
   .Titulo-otono { display: block; }
