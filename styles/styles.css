@@ -424,29 +424,34 @@ figure {
   .galeriafotos-responsive {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-    width: 100vw;
+    justify-content: center;
+    gap: 16px;
+    padding: 1em;
   }
-  .image-wrapper {
-    position: relative;
-    display: inline-block;
+  .galeriafotos-responsive figure {
+    margin: 0;
+    padding: 0.5em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 258px;
+    max-width: 100%;
   }
-  .image-wrapper img {
-    display: block;
-    width: 320px;
+  .galeriafotos-responsive img {
+    width: 100%;
+    min-width: 258px;
+    max-width: 100%;
     height: auto;
+    display: block;
   }
-  .image-wrapper .image-text {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: rgb(238, 204, 176);
-    font-size: 1.2em;
-    font-weight: bolder;
-    text-shadow: 2px 2px 4px #080808;
-    padding: 5px;
-    border-radius: 3px;
+  .galeriafotos-responsive figcaption {
+    text-align: center;
+    font-size: 1em;
+    padding: 0.5em 0 0 0;
+    word-break: break-word;
   }
   .newsletter {
     gap: 10px;
