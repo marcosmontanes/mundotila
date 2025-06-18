@@ -210,9 +210,10 @@ footer {
 .pagina-main {
   height: 100vh;
   display: grid;
-  grid-template-columns: 20% 70%;
+  grid-template-columns: 17% 83%;
   width: 100%;
   overflow: hidden;
+  padding-top: 10px;
 }
 
 .filtros-en-columna {
@@ -262,10 +263,9 @@ footer {
 
 .productos-en-columna {
   background-color: white;
-  padding: 1.5em;
   overflow-y: auto;
-  height: 100%;
-}
+   height: auto;
+ }
 
 .galeriafotos {
   @include flex-center(row, space-around, stretch);
@@ -280,6 +280,23 @@ figure {
   height: auto;
   text-align: center;
   font-size: 1em;
+  
+
+  img {
+    width: 100%;
+    min-width: 200px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  figcaption {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+
+  }  
 }
 
 .galeriafotos-responsive,
@@ -305,6 +322,7 @@ figure {
   .container-fluid { @include flex-center(row, flex-start, center); }
   .header-search-container { margin-left: auto; @include flex-center(row, flex-start, center); }
   .header-search-text { margin: 0; padding: 0 4px; white-space: nowrap; }
+  .galeriafotos-responsive { display: none; }
   footer { margin-left: 20px; }
 }
 

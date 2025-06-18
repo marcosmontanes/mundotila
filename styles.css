@@ -183,10 +183,9 @@ footer {
 .pagina-main {
   height: 100vh;
   display: grid;
-  grid-template-columns: 17% 83%;
+  grid-template-columns: 20% 80%;
   width: 100%;
   overflow: hidden;
-  padding-top: 10px;
 }
 
 .filtros-en-columna {
@@ -263,19 +262,6 @@ figure {
   text-align: center;
   font-size: 1em;
 }
-figure img {
-  width: 100%;
-  min-width: 200px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-figure figcaption {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  text-align: center;
-}
 
 .galeriafotos-responsive,
 .productos-en-columna-responsive {
@@ -318,9 +304,6 @@ figure figcaption {
     margin: 0;
     padding: 0 4px;
     white-space: nowrap;
-  }
-  .galeriafotos-responsive {
-    display: none;
   }
   footer {
     margin-left: 20px;
