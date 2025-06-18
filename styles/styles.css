@@ -11,6 +11,20 @@
   font-weight: normal;
   font-style: normal;
 }
+html, body {
+  width: 100%;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Helvetica-Neue-light", sans-serif;
   font-size: 1em;
@@ -412,6 +426,7 @@ figure {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px;
+    width: 100vw;
   }
   .image-wrapper {
     position: relative;
@@ -448,6 +463,9 @@ figure {
     justify-content: left;
     gap: 40px;
     margin-top: 20px;
+  }
+  footer {
+    margin-left: 0;
   }
 }
 .button {
@@ -496,6 +514,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 0px;
 }
 .example-2 .icon-content {
   margin: 0 10px;

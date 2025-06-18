@@ -36,6 +36,20 @@ $font-alt: "Helvetica Neue";
   font-style: normal;
 }
 
+html, body {
+  width: 100%;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: $font-main;
   font-size: 1em;
@@ -353,7 +367,11 @@ figure {
     color: whitesmoke;
     text-align: center;
   }
-  .columna-titulo2 { font-size: calc(0.3rem + 1.5vw); color: whitesmoke; text-align: center; }
+  .columna-titulo2 { 
+    font-size: calc(0.3rem + 1.5vw); 
+    color: whitesmoke; 
+    text-align: center; }
+
   .columna-texto {
     display: grid;
     place-items: center;
@@ -392,6 +410,7 @@ figure {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px;
+    width: 100vw;
   }
   .image-wrapper {
     position: relative;
@@ -428,6 +447,11 @@ figure {
     gap: 40px;
     margin-top: 20px;
   }
+
+  footer {
+    margin-left: 0;
+  }
+
 }
 
 // ===============================
@@ -503,6 +527,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 0px;
 
   .icon-content {
     margin: 0 10px;
