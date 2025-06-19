@@ -38,11 +38,15 @@ body {
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 0.875em;
   color: black;
   font-family: "Helvetica Neue";
   font-weight: 400;
   font-style: normal;
+}
+
+a {
+  font-size: 0.875em;
 }
 
 p {
