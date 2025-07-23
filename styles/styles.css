@@ -673,4 +673,38 @@ figure .img-wrapper .cart-icon {
   display: block !important;
 }
 
+.page-header .marquee {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 20px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+.page-header .marquee .marquee__inner {
+  display: flex;
+  width: max-content;
+  background-color: rgb(190, 98, 113);
+  animation: marquee 15s linear infinite;
+}
+.page-header .marquee .marquee__group {
+  display: flex;
+}
+.page-header .marquee .marquee__group span {
+  margin: 0 1.5rem;
+  white-space: nowrap;
+  background: rgb(190, 98, 113);
+  color: white;
+  padding: 4px 16px 4px 12px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
